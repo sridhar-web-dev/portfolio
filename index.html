@@ -20,18 +20,7 @@
                 #0a0a17;
     background-attachment: fixed; */
         }
-        /* Option 2 */
-        /* body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-    opacity: 0.12;
-} */
+       
 /* option 3 */
 .bg-particles {
     position: fixed;
@@ -46,13 +35,11 @@
     animation: moveParticles 30s linear infinite;
     opacity: .55;
 }
-
 @keyframes moveParticles {
     0% { transform: translate(0,0) rotate(0deg); }
     50% { transform: translate(-10%, -5%) rotate(180deg); }
     100% { transform: translate(0,0) rotate(360deg); }
 }
-
         .hero-section {
         height: 100vh; 
         padding: 0; 
@@ -451,14 +438,12 @@
     box-shadow: 0 15px 50px rgba(0,0,0,0.35), inset 0 0 30px rgba(255,255,255,0.05);
     animation: floatCard 6s ease-in-out infinite;
 }
-
 /* Soft Floating Animation */
 @keyframes floatCard {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-7px); }
     100% { transform: translateY(0px); }
 }
-
 /* Accent Bar at Top */
 .profile-header-line {
     width: 60px;
@@ -467,7 +452,6 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
-
 /* Name Styling */
 /* Base Card Enhancement */
 .profile-card {
@@ -479,14 +463,12 @@
     box-shadow: 0 15px 50px rgba(0,0,0,0.35), inset 0 0 30px rgba(255,255,255,0.05);
     animation: floatCard 6s ease-in-out infinite;
 }
-
 /* Soft Floating Animation */
 @keyframes floatCard {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-7px); }
     100% { transform: translateY(0px); }
 }
-
 /* Accent Bar at Top */
 .profile-header-line {
     width: 60px;
@@ -495,7 +477,6 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
-
 /* Name Styling */
 .profile-card .name {
     font-size: 34px;
@@ -505,7 +486,6 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
 }
-
 /* Designation */
 .profile-card .designation {
     font-size: 18px;
@@ -514,7 +494,6 @@
     color: #ffd6ff;
     margin-bottom: 18px;
 }
-
 /* Short Bio Text */
 .profile-card .short-notes {
     font-size: 15px;
@@ -522,7 +501,6 @@
     color: rgba(255,255,255,0.9);
     padding-right: 5px;
 }
-
 /* Bottom Divider */
 .profile-divider {
     margin-top: 25px;
@@ -543,7 +521,6 @@
     justify-content: center;
     align-items: center;
 }
-
 /* Profile Image */
 .profile-photo img {
     width: 100%;
@@ -552,43 +529,135 @@
     object-fit: cover;
     border: 3px solid rgba(255,255,255,0.4);
 }
-
-
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 991px) {
+/* Remove split layout → stack */
+.hero-section {
+    height: auto;
+    padding: 40px 15px;
+    display: block;
+}
+.hero-section .left-fixed
+{
+    height: 50vh;
+}
+.left-fixed, 
+.right-scroll {
+    position: static;
+    height: auto;
+    overflow: visible;
+}
+/* Left card full width */
+.profile-card {
+    margin-bottom: 35px;
+    width: 100%;
+}
+.project-header
+{
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* Tabs full width */
+.nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    padding: 8px;
+}
+.nav-tabs .nav-link {
+    padding: 10px 18px;
+    font-size: 14px;
+}
+.tab-content {
+    padding: 18px;
+    margin-top: 15px;
+}
+/* Image resize */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+/* Reduce blob size */
+.blob1, .blob2 {
+    width: 250px;
+    height: 250px;
+    filter: blur(70px);
+}
+/* Timeline Projects spacing */
+.project-item {
+    padding: 15px 18px;
+    margin-bottom: 25px;
+}
+/* Skills tags smaller */
+.skill-tags span {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+/* Remove body overflow limits */
+body {
+    overflow-x: hidden;
+    background-size: auto;
+}
+/* Contact Layout: Icons above text */
+.contact-strip-wrapper {
+    display: block;
+}
+.icon-strip {
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+}
+.profile-card1 li i
+{
+    color: #ff32b3;
+}
+.profile-card1 li a 
+{
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.profile-card1 li a:hover
+{
+    color: #ff32b3;
+}
     </style>
 </head>
 <body>
     <div class="blob blob1"></div>
     <div class="bg-particles"></div>
-
 <div class="blob blob2"></div>
     <section class="hero-section">
-        <div class="container-fluid px-5">
-            <div class="row">
+        <div class="container-fluid px-0 px-md-5">
+            <div class="row justify-content-between">
                 <!-- LEFT FIXED -->
-                <div class="col-lg-5 left-fixed">
+                <div class="col-lg-4 left-fixed">
                     <div class="card profile-card">
                         <div class="card-body">
-                    
                             <!-- PROFILE IMAGE -->
                             <!-- <div class="profile-photo">
                                 <img src="img/profile.jpg" alt="Sushmitha Profile">
                             </div> -->
-                    
                             <!-- Accent Line -->
                             <div class="profile-header-line"></div>
-                    
                             <h2 class="name">Sushmitha S</h2>
-                            <h4 class="designation">Digital Marketing Executive</h4>
-                    
+                            <h4 class="designation">Digital Marketer</h4>
                             <p class="short-notes">
-                                I’m a Digital Marketing Executive with 5+ years of experience specializing in SEO, Google Ads, Meta Ads, and performance-driven marketing strategies. I help brands improve visibility, engagement, and conversion growth through data-backed execution and creative strategy.
+                                I’m a Digital Marketer with 5+ years of experience specializing in SEO, Google Ads, social media marketing, and performance-driven marketing strategies. I help 25+ brands improve visibility, engagement, and conversion growth through data-backed execution and creative strategy.
                             </p>
-                    
+                            <ul class="list-unstyled profile-card1">
+                                <li class="mb-2"><i class="fa-solid fa-phone"></i> <a href="tel:+918098199695">+91 809 819 9695</a></li>
+                                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:sushmithacs27@gmail.com">sushmithacs27@gmail.com</a></li>
+                            </ul>
                             <div class="profile-divider"></div>
                         </div>
                     </div>
-                    
-                    
                 </div>
                 <!-- RIGHT SCROLLABLE -->
                 <div class="col-lg-7 right-scroll">
@@ -626,76 +695,94 @@
                         <div class="tab-pane fade show active" id="about">
                             <div class="about-intro">
                                 <p>
-                                    I’m a Digital Marketing Executive with 5+ years of experience specializing in SEO, Google Ads, Meta Ads, and performance-driven marketing strategies. I help brands improve visibility, engagement, and conversion growth through data-backed execution and creative strategy.
+                                    I am a Marketing Tech Analyst with over 5 years of experience in digital marketing, specializing in social media strategy, content development, SEO, and paid campaigns. I work across multiple digital platforms to build brand visibility and deliver measurable results.
                                 </p>
+                                <p>With hands-on expertise in tools like SEMrush, Google Analytics, Search Console, Hootsuite, and Twitter Analytics, I focus on creating data-driven campaigns that enhance engagement, improve performance, and generate quality leads. My approach combines creativity with analytics to help brands grow consistently in the digital space.</p>
                             </div>
                             <div class="about-summary-title">
                                 <h4>Professional Summary</h4>
                             </div>
                             <ul class="about-list">
                                 <li>5+ years of experience in Digital Marketing across IT and technology sectors.</li>
-                                <li>Expertise in SEO, Google Ads, Meta Ads & Social Media Marketing.</li>
+                                <li>Expertise in SEO, Social Media Marketing, Google Ads.</li>
                                 <li>Quick adaptation to new digital tools and technologies.</li>
                                 <li>Experience managing deployment, support, & campaign development.</li>
                                 <li>Involved in strategy planning, execution, testing, and optimization.</li>
                                 <li>Performed campaign performance analysis & keyword research to drive ROI.</li>
-                                <li>Automated marketing workflows using GA, GSC, SEMrush, Wati & other tools.</li>
+                                <li>Automated marketing workflows using GA4, GSC, WATI, Meta Business Suite</li>
                             </ul>
                         </div>
                         <!-- SKILLS TAB -->
                         <div class="tab-pane fade" id="skills">
                             <div class="skill-group">
-                                <h4>Marketing Platforms</h4>
+                                <h4>SEO</h4>
                                 <div class="skill-tags">
-                                    <span>SEO</span>
-                                    <span>Google Ads</span>
-                                    <span>Meta Ads</span>
+                                    <span>On-page</span>
+                                    <span>Off-page</span>
+                                    <span>Technical SEO</span>
                                 </div>
                             </div>
                             <div class="skill-group">
-                                <h4>SEO Tools</h4>
+                                <h4>Advertising Platforms</h4>
+                                <div class="skill-tags">
+                                    <span>Google Ads</span>
+                                    <span>Social Media Marketing</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Analytics & Tracking</h4>
                                 <div class="skill-tags">
                                     <span>Google Search Console</span>
-                                    <span>Screaming Frog</span>
-                                    <span>SEMrush</span>
-                                    <span>Browser Extensions</span>
-                                </div>
-                            </div>
-                            <div class="skill-group">
-                                <h4>Analytics Tools</h4>
-                                <div class="skill-tags">
                                     <span>Google Analytics</span>
                                     <span>Google Tag Manager</span>
                                     <span>Microsoft Clarity</span>
                                 </div>
                             </div>
                             <div class="skill-group">
-                                <h4>Social Media Management</h4>
+                                <h4>Research & Optimization</h4>
                                 <div class="skill-tags">
+                                    <span>SEMrush</span>
+                                    <span>Keyword Research</span>
+                                    <span>Lead Generation</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Content & Social</h4>
+                                <div class="skill-tags">
+                                    <span>Content Strategy</span>
+                                    <span>Social Media Marketing</span>
                                     <span>Canva</span>
-                                    <span>Wati</span>
-                                </div>
-                            </div>
-                            <div class="skill-group">
-                                <h4>Email Marketing Tools</h4>
-                                <div class="skill-tags">
-                                    <span>Zoho Mail</span>
-                                    <span>Mailchimp</span>
-                                    <span>Brevo</span>
-                                </div>
-                            </div>
-                            <div class="skill-group">
-                                <h4>Programming Skills</h4>
-                                <div class="skill-tags">
-                                    <span>PHP (Basics)</span>
                                     <span>WordPress</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Social Media Analytics</h4>
+                                <div class="skill-tags">
+                                    <span>Twitter Analytics</span>
+                                    <span>Facebook Insights</span>
+                                    <span>LinkedIn Analytics</span>
+                                    <span>Meta Business Suite</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Customer Engagement Tools</h4>
+                                <div class="skill-tags">
+                                    <span>WATI</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Campaign Execution</h4>
+                                <div class="skill-tags">
+                                    <span>Meta Ads Campaigns</span>
+                                    <span>Google Ads Campaigns</span>
+                                    <span>Social Media Campaigns</span>
                                 </div>
                             </div>
                         </div>
                         <!-- EXPERIENCE TAB -->
                         <div class="tab-pane fade" id="experience">
                             <div class="exp-box" style="animation-delay: 0s;">
-                                <h4>Kappsoft — Digital Marketing Executive</h4>
+                                <h4>Kappsoft — Digital Marketer</h4>
                                 <span class="duration">Aug 2024 – Present</span>
                                 <p>Managing SEO, paid campaigns, analytics, and marketing strategy execution.</p>
                             </div>
@@ -709,12 +796,22 @@
                                 <span class="duration">Sep 2023 – Mar 2024</span>
                                 <p>Provided SEO consulting and digital strategy for enterprise projects.</p>
                             </div>
+                            <div class="exp-box" style="animation-delay: 1s;">
+                                <h4>Noesis Publishing Services — Copy Editor</h4>
+                                <span class="duration">Feb 2020 – Aug 2023</span>
+                                <p>Edited and optimized content for accuracy and  clarity</p>
+                            </div>
+                            <div class="exp-box" style="animation-delay: 1s;">
+                                <h4>Pristine | Media — SEO Analyst</h4>
+                                <span class="duration">Aug 2016 – Jan 2020</span>
+                                <p>Handled keyword research, on-page SEO, and link building to improve organic reach.</p>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="projects">
                             <!-- PROJECT BLOCK -->
                             <div class="project-item">
                                 <div class="project-header">
-                                    <h4>Indian Rubber Materials Research Institute (IRMRI)</h4>
+                                    <h4>Indian Rubber Materials Research Institute (IRMRI) - SEO</h4>
                                     <span class="project-duration">Sep 2024 – Present</span>
                                 </div>
                                 <p class="project-type">Keyword Research | On-page | Off-page | Technical SEO</p>
@@ -723,12 +820,12 @@
                                     Optimized technical SEO, improved performance, and drove consistent lead growth.
                                 </p>
                                 <ul class="project-points">
-                                    <li>Conducted commercial keyword research to scale business growth</li>
-                                    <li>Improved on-page SEO including meta tags, headers, internal links</li>
-                                    <li>Built high-quality backlinks to improve domain authority</li>
-                                    <li>Fixed crawling & indexing issues to improve performance</li>
-                                    <li>Generated 5+ monthly leads through targeted SEO campaigns</li>
-                                    <li>Improved page speed & rankings to achieve first-page visibility</li>
+                                    <li>Identified 50+ high-intent keywords, increasing organic traffic by 40%</li>
+                                    <li>Optimised on-page SEO (meta tags, headers, schema, internal links) to boost search visibility.</li>
+                                    <li>Built 100+ quality backlinks to strengthen domain authority and improve rankings.</li>
+                                    <li>Resolved major technical issues including crawling, indexing, and mobile usability errors.</li>
+                                    <li>Generated 5+ monthly leads through targeted SEO strategies and content improvements.</li>
+                                    <li>Improved page speed and secured top 3 rankings for key commercial keywords</li>
                                 </ul>
                             </div>
                             <!-- PROJECT BLOCK -->
@@ -753,19 +850,52 @@
                             <!-- PROJECT BLOCK -->
                             <div class="project-item">
                                 <div class="project-header">
-                                    <h4>IMFA Global — Meta Ads Campaign</h4>
-                                    <span class="project-duration">Aug 2025 – Sep 2025</span>
+                                    <h4>Drealtors — Social Media Marketing</h4>
+                                    <span class="project-duration">Sep 2025</span>
                                 </div>
-                                <p class="project-type">Meta Ads | Forex & Crypto Webinar Lead Gen</p>
+                                <p class="project-type">Meta Ads | Lead Generation | Content Calendar all Channels</p>
                                 <p class="project-desc">
-                                    Conducted performance marketing campaigns across Middle East audiences to promote Forex & Crypto webinars.
+                                    Property management service in Dubai handling tenants, rent, and maintenance for stress-free rental income.
                                 </p>
                                 <ul class="project-points">
-                                    <li>Planned & executed Meta ads targeting GCC countries</li>
-                                    <li>Created ad strategy and guided designers on creatives</li>
-                                    <li>Managed 5-day budget for maximum ROI</li>
-                                    <li>Generated 320 qualified leads via optimized targeting</li>
-                                    <li>Used WATI for lead nurturing and webinar flow automation</li>
+                                    <li>Generated 50+ qualified leads and closed 3 property management sales.</li>
+                                    <li>Achieved AED 0.80 – 1.20 CPC and improved ROI by 35%.</li>
+                                    <li>Increased property site visits by 40% with optimized Meta campaigns.</li>
+                                    <li>Used WATI for personalized lead nurturing and follow-ups.</li>
+                                    <li>Leveraged Twitter for real-time property updates and market insights.</li>
+                                    <li>Used Twitter Analytics to improve engagement by 28% through audience-focused content.</li>
+                                </ul>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-header">
+                                    <h4>Emarald Hotel - Social Media Marketing</h4>
+                                    <span class="project-duration">Oct 2025</span>
+                                </div>
+                                <p class="project-type">Meta Ads | Retargeting Campaign</p>
+                                <p class="project-desc">A premium hotel and resort brand offering comfortable stays, dining, and wellness experiences across India.</p>
+                                <ul class="project-points">
+                                    <li>Generated 250+ room booking inquiries through targeted Meta Ads for both cities.</li>
+                                    <li>Improved direct bookings by 30% through optimised ad creatives and audience targeting.</li>
+                                    <li>Achieved an average CPC of ₹4–₹7, ensuring cost-effective lead generation.</li>
+                                    <li>Increased website visits by 40% for Calicut and Thiruvananthapuram property pages.</li>
+                                    <li>Implemented retargeting ads that boosted booking conversions by 22%.</li>
+                                    <li>Coordinated with the team to update creatives featuring seasonal offers and room highlights.</li>
+                                    <li>Utilised the WATI app for lead nurturing — sending personalised messages and follow-ups.</li>
+                                </ul>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-header">
+                                    <h4>IMFA Global - Social Media Marketing</h4>
+                                    <span class="project-duration">Aug 2025 to Sep 2025</span>
+                                </div>
+                                <p class="project-type">Meta Ads | Google Display Ads | Course Sales</p>
+                                <p class="project-desc">Get affordable, expert-led trading education with IMFA Global. Learn stocks, forex, commodities, and crypto to trade confidently and achieve real results.</p>
+                                <ul class="project-points">
+                                    <li>Planned and executed Meta Ads campaigns targeting 5+ Middle East countries for Forex and Crypto webinars.</li>
+                                    <li>Created ad content strategies and provided creative inputs to designers, resulting in high-converting visuals.</li>
+                                    <li>Managed a 5-day ad budget of AED 1,000, ensuring maximum ROI through audience targeting and ad optimisation.</li>
+                                    <li>Achieved 320+ qualified leads from both campaigns through continuous performance tracking and data analysis.</li>
+                                    <li>Utilised the WATI app for lead nurturing — sending personalised messages, follow-ups, and Zoom webinar links to improve conversion rates.</li>
                                 </ul>
                             </div>
                         </div>
