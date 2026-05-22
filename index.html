@@ -3,385 +3,566 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sridhar Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-       body{background:#f8f9fa}.hero{height:40vh;overflow:hidden;background:linear-gradient(135deg,#0A2463,#1e3c72);background:#0A2463;position:relative}#particles-js{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}.hero .container{position:relative;z-index:1}.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgb(0 0 0 / .25);z-index:0}.custom-navbar{background:linear-gradient(135deg,#0A2463,#1e3c72);box-shadow:rgb(100 100 111 / .8) 0 7px 29px 0;border-radius:0;padding:.5rem 2rem;margin:-2rem auto 2rem auto;max-width:800px;transition:all 0.3s ease}.custom-navbar .nav-link{color:#fff;margin:0 1rem;font-weight:500;position:relative;transition:color 0.3s ease}.custom-navbar .nav-link::after{content:'';position:absolute;width:0%;height:2px;bottom:-5px;left:0;background-color:#fff;transition:width 0.3s}.custom-navbar .nav-link:hover::after{width:100%}.custom-navbar .nav-link:hover{color:#f0f0f0}.sticky-top{top:10px}.summary-section{background:linear-gradient(135deg,#ffffff,#e3f0ff);color:#000;border-radius:0;padding:3rem 2rem;box-shadow:0 10px 25px rgb(0 0 0 / .2);margin-bottom:2rem}.summary-section .section-title{font-size:2rem;font-weight:700;position:relative}.tech-stack{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}.tech-label{background:#0c276547;color:#000;padding:.3rem .6rem;font-size:.85rem;font-weight:600;letter-spacing:1px;border-radius:0;transition:transform 0.2s ease,box-shadow 0.2s ease;cursor:default}.tech-label:hover{transform:translateY(-3px);box-shadow:0 5px 15px rgb(0 0 0 / .2)}.summary-text{font-size:1.1rem;line-height:1.7;text-align:left;margin:0 auto}.skills-section{background:#f5f7fa;border-radius:0;padding:3rem 2rem}.section-title{color:#0A2463;font-size:35px!important;font-weight:700!important}.skills-section .section-title{font-size:2rem;font-weight:700;position:relative}.skill-card{background:#fff;border-radius:0;padding:1rem 1.5rem;margin:10px 0;box-shadow:0 5px 15px rgb(0 0 0 / .1);transition:transform 0.3s ease,box-shadow 0.3s ease}.skill-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgb(0 0 0 / .2)}.experience-section{position:relative}.timeline{position:relative;margin:2rem 0;padding-left:30px}.timeline::before{content:'';position:absolute;top:0;left:20px;width:4px;height:100%;background:#0A2463;border-radius:0}.timeline-item{position:relative;margin-bottom:2rem}.timeline-dot{position:absolute;left:-22px;top:12%;width:30px;height:30px;background:#1e3c72;border-radius:0;border:3px solid #fff;animation:pulse 2s infinite ease-in-out}@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgb(30 60 114 / .7)}50%{transform:scale(1.2);box-shadow:0 0 10px 10px #fff0}100%{transform:scale(1);box-shadow:0 0 0 0 #fff0}}.timeline-content{margin-left:40px;background:linear-gradient(135deg,#f0f4ff,#ffffff);border-radius:0;box-shadow:0 10px 25px rgb(0 0 0 / .1);transition:transform 0.3s ease,box-shadow 0.3s ease}.timeline-content:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgb(0 0 0 / .2)}.projects-section{background:#f9f9fc;padding:4rem 2rem}.project-item{background:linear-gradient(135deg,#ffffff,#e3f0ff);border-radius:0;box-shadow:0 8px 20px rgb(0 0 0 / .1);transition:transform 0.3s ease,box-shadow 0.3s ease}.project-item:hover{transform:translateY(-8px);box-shadow:0 15px 35px rgb(0 0 0 / .2)}.project-item h5{color:#0A2463;margin-bottom:1rem;font-weight:700}.project-item ul{list-style:none;padding:0}.project-item ul li{margin-bottom:.5rem;padding-left:1.2rem;position:relative;font-size:.95rem}.project-item ul li::before{content:'•';position:absolute;left:0;color:#1e3c72;font-weight:700}.education-section{background:#fff;color:#0A2463;padding:4rem 2rem;border-radius:0;margin-bottom:2rem;box-shadow:0 5px 20px rgb(0 0 0 / .05)}.education-section .section-title{font-size:2rem;font-weight:700;margin-bottom:2rem}.education-content{text-align:center}.education-item h4{font-weight:700;margin-bottom:.5rem;font-size:1.5rem}.education-item p{font-size:1rem;color:#4a4a4a;margin:0}.stat-box{border: 1px solid #0A246350;color:#0A2463;transition:transform 0.3s,box-shadow 0.3s}.stat-box:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgb(0 0 0 / .2)}.stat-number{font-weight:700;font-size:3rem}.stat-label{display:block;font-size:.9rem;text-align:center;opacity:.9}.fade-in{opacity:0;animation:fadeIn 1s forwards}.delay-1{animation-delay:0.8s}.delay-2{animation-delay:1.5s}.delay-3{animation-delay:2.2s}@keyframes fadeIn{to{opacity:1}}.typing-text{white-space:nowrap;overflow:hidden;font-size:2.5rem}.section-title{font-weight:700;margin-bottom:25px}
-        .file-card { min-height: 220px;
-            background: linear-gradient(135deg, #ffffff, #e3f0ff);
-            border-radius: 0;
-            box-shadow: 0 8px 20px rgb(0 0 0 / .1);
-            border: none !important;
-        }
-        .file-icon { font-size: 48px; }
-        .meta { font-size: 0.9rem; color: #6c757d; }
-        .btn-download { min-width: 120px; }
-        .preview-frame { width: 100%; height: 60vh; border: 0; }
-        @media (max-width: 576px) {
-        .preview-frame { height: 50vh; }
-        }
-    </style>
+    <title>Sridhar M | Senior UI & Full-Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-icons/6.4.0/css/all.min.css">
 </head>
 <body>
-<!-- Header / Hero Section -->
-<section class="hero text-center d-flex align-items-center justify-content-center position-relative" id="Home">
-    <!-- Background Particles Container -->
-    <div id="particles-js" class="position-absolute w-100 h-100"></div>
-    <div class="container position-relative">
-        <!-- Typing Name -->
-        <h1 class="fw-bold text-white typing-text" id="hero-name"></h1>
-        <!-- Fade-in content -->
-        <p class="lead text-white fade-in delay-1">Senior Web Developer | PHP | JavaScript | Angular | API Integrations</p>
-        <p class="text-white fade-in delay-2">📍 Chennai, Tamil Nadu | 📞 +91 6374 666 745 | ✉️ sridharjnet@gmail.com</p>
-        <a href="https://www.linkedin.com/in/sridhar-manoharan/" class="btn btn-light btn-lg mt-3 fade-in delay-3" target="_blank">LinkedIn Profile</a>
-    </div>
-    <!-- Dark Overlay -->
-    <div class="hero-overlay"></div>
-</section>
-    <!-- Navbar -->
-<!-- Centered Elegant Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
-    <div class="container justify-content-center">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-    <ul class="navbar-nav">
-    <li class="nav-item">
-    <a class="nav-link" href="#Home">Home</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#Skills">Skills</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#Experience">Experience</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#Project">Projects</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#Documents">Documents</a>
-        </li>
-    </ul>
-    </div>
-    </div>
-    </nav>
-<!-- Summary Section -->
-<section class="container py-5" >
-   <div class="container ">
-    <div class="row justify-content-between">
-        <div class="col-lg-8 summary-section">
-            <h2 class="section-title text-start mb-4">Professional Summary</h2>
-            <p class="summary-text">Experienced Web Developer with 5+ years of expertise in full-stack development using PHP, MySQL, JavaScript, jQuery, Angular, and modern front-end technologies. Skilled in API integrations, database engineering, performance optimization, and scalable architecture design. Adept at building responsive, secure, and high-performance web applications. Currently strengthening abilities in React, TypeScript, and Node.js to expand full-stack capabilities.</p>
+
+    <div class="glow-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">&lt;SRIDHAR<span>.M</span> /&gt;</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact" class="btn-nav">Get In Touch</a>
+            </div>
         </div>
-        <div class="col-lg-4 summary-section">
-            <div class="row justify-content-center g-3">
-                <div class="col-6">
-                    <div class="stat-box text-center p-3 rounded">
-                        <h1 class="stat-number mb-1" data-target="5">0<sup>+</sup></h1>
-                        <span class="stat-label">Yr of Experience</span>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <div class="badge">Available for New Projects</div>
+            <h1 class="hero-title">Engineering High-Performance <br><span class="text-gradient">Web Experiences</span></h1>
+            <p class="hero-subtitle">
+                Senior Developer specializing in building pixel-perfect trading platforms, interactive dashboards, and ultra-low latency interfaces. Turning complex wireframes into production-ready UI.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="stats-container">
+        <div class="stat-card">
+            <h3>6+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-card">
+            <h3>25+</h3>
+            <p>Architected Apps</p>
+        </div>
+        <div class="stat-card">
+            <h3>30%</h3>
+            <p>Downtime Reduction</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Deep-dive into core frontend architectures and trading interfaces built for scale.</p>
+            </div>
+
+            <div class="project-wrapper">
+                <div class="project-tabs">
+                    <button class="tab-btn active" onclick="switchProject(event, 'cryx')">CRYX Platform</button>
+                    <button class="tab-btn" onclick="switchProject(event, 'unicndcx')">UnicoinDCX & Zebacus</button>
+                    <button class="tab-btn" onclick="switchProject(event, 'imfa')">IMFA Global</button>
+                    <button class="tab-btn" onclick="switchProject(event, 'mex')">Mex Madagascar</button>
+                </div>
+
+                <div class="project-display">
+                    <div id="cryx" class="project-content active">
+                        <div class="project-info">
+                            <span class="project-tag">Crypto Exchange Platform</span>
+                            <h3>CRYX (AX1 Systems)</h3>
+                            <p>Engineered premium, low-latency client-side applications for high-frequency trading assets.</p>
+                            <ul class="project-bullets">
+                                <li>Designed and built highly responsive trading interfaces, ensuring pixel-perfect layouts across mobile devices, tablets, and desktops using HTML5, CSS3, and Bootstrap.</li>
+                                <li>Developed dynamic, interactive front-end components for real-time market data displays, order books, and interactive charts using JavaScript and jQuery.</li>
+                                <li>Optimized UI performance and file delivery to ensure ultra-low latency rendering and snappy page load speeds during high-traffic trading periods.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>jQuery</span><span>Bootstrap</span><span>AJAX</span><span>UI/UX Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="unicndcx" class="project-content">
+                        <div class="project-info">
+                            <span class="project-tag">Trading Interfaces</span>
+                            <h3>UNICOINDCX & ZEBACUS</h3>
+                            <p>Focused on seamless front-to-back data binding and complex management layouts.</p>
+                            <ul class="project-bullets">
+                                <li>Handled API integrations for real-time trading data, authentication, and transaction processing.</li>
+                                <li>Designed and implemented blog page dashboards with a user-friendly interface and efficient content management capabilities.</li>
+                                <li>Ensured seamless data flow between systems using PHP, MySQLi, and AJAX for responsive application behavior.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>PHP</span><span>MySQLi</span><span>AJAX</span><span>JS</span><span>Bootstrap</span><span>API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="imfa" class="project-content">
+                        <div class="project-info">
+                            <span class="project-tag">E-Learning Systems</span>
+                            <h3>IMFAGLOBAL.COM</h3>
+                            <p>Full-stack architectural management delivering intuitive user flows for educational tech.</p>
+                            <ul class="project-bullets">
+                                <li>Managed full-stack development, overseeing both front-end UI design and back-end functionality.</li>
+                                <li>Designed responsive, user-friendly interfaces for course listings, enrollment processes, and student dashboards.</li>
+                                <li>Integrated course content management features to enable seamless and efficient content updates.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>HTML5</span><span>CSS</span><span>JS</span><span>PHP</span><span>jQuery</span><span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mex" class="project-content">
+                        <div class="project-info">
+                            <span class="project-tag">Corporate Web Profiles</span>
+                            <h3>MEXMADAGASCAR.COM</h3>
+                            <p>High-fidelity, responsive lead capture layout and presentation layer optimization.</p>
+                            <ul class="project-bullets">
+                                <li>Developed and maintained front-end components with a fully responsive and mobile-friendly design approach.</li>
+                                <li>Configured and implemented email functionality for contact and inquiry forms to ensure reliable communication.</li>
+                                <li>Ensured cross-browser compatibility and optimized page load performance for consistent UX.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>HTML5</span><span>CSS</span><span>JS</span><span>Bootstrap</span><span>PHP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="all-work" class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Production Portfolio</h2>
+                <p>An extensive production record of over 25+ deployed live web applications and trading portals.</p>
+            </div>
+
+            <div id="portfolio-wrap-grid" class="full-wrap-grid">
+                
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://www.unicoindcx.com/img/logo/header-logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>UNICOINDCX</h3>
+                        <a href="#" class="project-domain-link" target="_blank" rel="noopener">unicoindcx.com <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="stat-box text-center p-3 rounded">
-                        <h1 class="stat-number mb-1" data-target="40">0<sup>+</sup></h1>
-                        <span class="stat-label">Websites</span>
+
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://www.zebacus.com/img/logo/header-logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>ZEBACUS</h3>
+                        <a href="#" class="project-domain-link" target="_blank" rel="noopener">zebacus.com <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="stat-box text-center p-3 rounded">
-                        <h1 class="stat-number mb-1" data-target="10">0<sup>+</sup></h1>
-                        <span class="stat-label">Web Apps</span>
+
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://www.imfaglobal.com/img/logo/imfa-header-logo.svg?v=221" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>IMFA GLOBAL</h3>
+                        <a href="https://www.imfaglobal.com" class="project-domain-link" target="_blank" rel="noopener">imfaglobal.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                           <img src="https://mexmadagascar.com/img/logo/header-logo.png?v=04" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>MEX MADAGASCAR</h3>
+                        <a href="https://www.mexmadagascar.com" class="project-domain-link" target="_blank" rel="noopener">mexmadagascar.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://codconsultants.ae/img/logo/header-logo.svg?v=01" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>COD CONSULTANTS</h3>
+                        <a href="https://www.codconsultants.ae" class="project-domain-link" target="_blank" rel="noopener">codconsultants.ae <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://www.atlasdat.com/img/logo/atlas-logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>ATLAS DAT</h3>
+                        <a href="https://www.atlasdat.com/" class="project-domain-link" target="_blank" rel="noopener">atlasdat.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                          <img src="https://www.drealtors.com/img/logo/dark-logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>DREALTORS</h3>
+                        <a href="https://www.drealtors.com/" class="project-domain-link" target="_blank" rel="noopener">drealtors.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://maverico.com/assets/footer_logo.png" alt="" width="100px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>MAVERICO.COM</h3>
+                        <a href="https://maverico.com/" class="project-domain-link" target="_blank" rel="noopener">maverico.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://rubberandplastic.in/img/logo41.webp" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>RUBBER AND PLASTICS</h3>
+                        <a href="https://rubberandplastic.in/" class="project-domain-link" target="_blank" rel="noopener">rubberandplastic.in<i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://maeonlabs.com/assets/img/Maeon_Logo_PNG%20Colour.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>MAEONLABS</h3>
+                        <a href="https://maeonlabs.com/" class="project-domain-link" target="_blank" rel="noopener">maeonlabs.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder" style="background-color: black;">
+                            <img src="https://buildspaceindia.com/images/build-space.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>BUILD SPACE INDIA</h3>
+                        <a href="https://buildspaceindia.com/" class="project-domain-link" target="_blank" rel="noopener">buildspaceindia.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div><div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder" style="background-color: black;">
+                            <img src="https://www.jerithgroup.com/wp-content/themes/jerithnew/assets/images/jerith_logo.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>JERITH GROUP</h3>
+                        <a href="https://www.jerithgroup.com/" class="project-domain-link" target="_blank" rel="noopener">jerithgroup <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div><div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://nrghospital.com/images/logo/6-01.png" alt="" width="150px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>NRG HOSPITALS</h3>
+                        <a href="https://nrghospital.com/" class="project-domain-link" target="_blank" rel="noopener">nrghospital.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div><div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://topnotchads.in/assets/img/tn-black.png" alt="" width="120px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>TOP NOTCH ADS</h3>
+                        <a href="https://topnotchads.in/" class="project-domain-link" target="_blank" rel="noopener">topnotchads.in <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div><div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://yourofficepartners.com/wp-content/uploads/2025/02/YOP-Logo-8.webp" alt="" width="120px">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>YOUR OFFICE PARTNERS</h3>
+                        <a href="https://yourofficepartners.com/" class="project-domain-link" target="_blank" rel="noopener">yourofficepartners.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div><div class="mini-project-card">
+                    <div class="mockup-display">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="mockup-img-placeholder">
+                            <img src="https://esthellrubbers.com/img/esthel-rubber-logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mini-card-body">
+                        <h3>ESTELL RUBBERS</h3>
+                        <a href="https://esthellrubbers.com/" class="project-domain-link" target="_blank" rel="noopener">esthellrubbers.com <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button id="btn-toggle-portfolio" class="btn-secondary" onclick="togglePortfolioWork()">View All Projects</button>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Career Journey</h2>
+                <p>Proven track record of scaling development processes and leading code optimizations.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-panel">
+                        <div class="timeline-meta-inline">
+                            <div class="company-title">Kappsoft Systems Pvt Ltd <span>(Pride Group, Dubai)</span></div>
+                            <div class="timeline-date">Feb 2024 - Present</div>
+                        </div>
+                        <div class="role-title">Senior Full Stack Developer</div>
+                        <p>Led design and architecture of 25+ web applications. Formulated comprehensive code reviews, enhanced systems parameters, and handled deployment uptimes while managing legacy code refactoring patterns.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-panel">
+                        <div class="timeline-meta-inline">
+                            <div class="company-title">Maverico Technologies Pvt Ltd</div>
+                            <div class="timeline-date">Jun 2022 - Feb 2024</div>
+                        </div>
+                        <div class="role-title">Senior Full Stack Web Developer</div>
+                        <p>Optimized core internal systems for 30+ production portals. Successfully decreased infrastructure production downtime by a definitive margin of 30% through strict cleanup pipeline implementations.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-panel">
+                        <div class="timeline-meta-inline">
+                            <div class="company-title">Allonsy Ventures Pvt Ltd</div>
+                            <div class="timeline-date">Jul 2020 - May 2022</div>
+                        </div>
+                        <div class="role-title">Junior Website Developer</div>
+                        <p>Revamped web application security frameworks, reducing production vulnerability incident occurrences significantly from 2.3% down to 0.02% using defensive validation rulesets.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-   </div>
     </section>
-    <!-- Skills Section -->
-    <section class="container py-5 skills-section" id="Skills">
-    <h2 class="section-title text-start mb-5">Core Competencies</h2>
-    <div class="row">
-    <div class="col-lg-6"><div class="skill-card"><strong>Front-End:</strong> HTML5, CSS3, JavaScript, jQuery, Bootstrap, Angular</div></div>
-    <div class="col-lg-6"><div class="skill-card"><strong>Back-End:</strong> PHP, REST APIs</div></div>
-    <div class="col-lg-6"><div class="skill-card"><strong>Database:</strong> MySQL, Query Optimization</div></div>
-    <div class="col-lg-6"><div class="skill-card"><strong>Tools & Platforms:</strong> Git, GitHub, Postman</div></div>
-    <div class="col-lg-6"><div class="skill-card"><strong>Specializations:</strong> Performance Optimization, API Integrations, Troubleshooting</div></div>
-    </div>
-    </section>
-<!-- Experience Section -->
-<section class="container py-5 experience-section" id="Experience">
-    <h2 class="section-title text-start mb-5">Professional Experience</h2>
-    <div class="timeline">
-    <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-content card p-4">
-    <h4>KappSoft Systems Pvt Ltd — Senior Web Developer</h4>
-    <small>Feb 2024 – Present</small>
-    <ul class="mt-2">
-    <li>Led the architecture and development of 25+ scalable web applications.</li>
-    <li>Performed code reviews ensuring coding standards and maintainability.</li>
-    <li>Optimized legacy systems improving performance and stability.</li>
-    <li>Delivered 15+ new websites and maintained 25+ existing platforms.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    </div>
-    <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-content card p-4">
-    <h4>Maverico Technologies Pvt Ltd — Senior Web Developer</h4>
-    <small>Jun 2022 – Feb 2024</small>
-    <ul class="mt-2">
-    <li>Engineered backend systems for 30+ websites ensuring efficient data flow.</li>
-    <li>Implemented optimization processes reducing downtime by 30%.</li>
-    <li>Developed 10+ new backends and maintained 15+ client websites.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    </div>
-    <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-content card p-4">
-    <h4>Allonsy Ventures Pvt Ltd — Junior Web Developer</h4>
-    <small>Jul 2020 – May 2022</small>
-    <ul class="mt-2">
-    <li>Reduced security vulnerabilities from 2.3% to 0.02%.</li>
-    <li>Developed 10+ new websites and maintained 20+ existing platforms.</li>
-    <li>Delivered responsive UI with cross-browser compatibility.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    </div>
-    <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-content card p-4">
-    <h4>Bhemya Software Solution Pvt Ltd — Intern Web Developer</h4>
-    <small>Dec 2019 – Jul 2020</small>
-    <ul class="mt-2">
-    <li>Implemented pixel-perfect front-end layouts.</li>
-    <li>Assisted in building 5+ responsive websites.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
-    <!-- Projects Section -->
-<section class="container py-5 projects-section" id="Project">
-    <h2 class="section-title text-start mb-5">Project Highlights</h2>
-    <div class="project-list">
-    <div class="project-item card border-0 p-4 mb-4">
-    <h5>UnicoinDCX & Zebacus — Trading Platforms</h5>
-    <ul class="mt-2">
-    <li>Integrated APIs for real-time trading and authentication.</li>
-    <li>Built dashboards for real-time data and insights.</li>
-    <li>Enhanced backend performance and workflows.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    <div class="project-item card border-0 p-4 mb-4">
-    <h5>IMFAGLOBAL.COM — Forex & Crypto Courses Platform</h5>
-    <ul class="mt-2">
-    <li>Managed full-stack development including UI and backend.</li>
-    <li>Built dynamic course pages and user dashboards.</li>
-    <li>Implemented content management functionalities.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    <div class="project-item card border-0 p-4 mb-4">
-    <h5>MEXMADAGASCAR.COM — Corporate Website</h5>
-    <ul class="mt-2">
-    <li>Developed responsive front-end UI.</li>
-    <li>Configured backend mail functionality.</li>
-    <li>Optimized cross-browser performance.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    <div class="project-item card border-0 p-4 mb-4">
-    <h5>CODCONSULTANTS.AE — Architecture & Consultancy Website</h5>
-    <ul class="mt-2">
-    <li>Built brand-consistent responsive UI pages.</li>
-    <li>Ensured accessibility and modern UI standards.</li>
-    </ul>
-    <div class="tech-stack mt-3 align-items-center">
-        <span><b>Tech Stack :</b> </span>
-        <span class="tech-label">PHP</span>
-        <span class="tech-label">MySQL</span>
-        <span class="tech-label">JavaScript</span>
-        <span class="tech-label">jQuery</span>
-        <span class="tech-label">Angular</span>
-        <span class="tech-label">Bootstrap</span>
-        <span class="tech-label">REST APIs</span>
-    </div>
-    </div>
-    </div>
-    </section>
-<!-- Education -->
-<section class="container py-5 education-section">
-    <h2 class="section-title text-start mb-4">Education</h2>
-    <div class="education-content text-start">
-    <div class="education-item">
-    <h4>B.E. – Electronics & Communication Engineering</h4>
-    <p>Selvam College of Technology (2013–2017)</p>
-    </div>
-    </div>
-    </section>
-    <div class="container py-5" id="Documents">
-        <h2 class="section-title text-start mb-4">Documents</h2>
-        <p class="text-muted">Download or preview my Resume and Cover Letter.</p>
-        <div class="row g-3">
-        <!-- Resume Card -->
-        <div class="col-md-6">
-        <div class="card file-card shadow-sm">
-        <div class="card-body d-flex flex-column">
-        <div class="d-flex align-items-center mb-3">
-        <div class="me-3 text-primary file-icon">📄</div>
-        <div>
-        <h5 class="card-title mb-0">Resume - Sridhar Manoharan</h5>
-        <div class="meta">PDF • 220 KB • Updated: Aug 2025</div>
-        </div>
-        </div>
-        <p class="card-text text-muted">My up-to-date resume highlighting experience in PHP, MySQL, JavaScript, Angular, and full-stack projects.</p>
-        <div class="mt-auto d-flex gap-2">
-        <a href="./Sridhar Web Developer.pdf" download="Sridhar_Resume.pdf" class="btn btn-outline-primary btn-download" aria-label="Download resume">
-        <i class="bi bi-download"></i> Download
-        </a>
-        <a href="./Sridhar Web Developer.pdf" target="_blank" class="btn btn-light border">Preview</a>
-        </div>
-        </div>
-        </div>
-        </div>
-        <!-- Cover Letter Card -->
-        <div class="col-md-6">
-        <div class="card file-card shadow-sm">
-        <div class="card-body d-flex flex-column">
-        <div class="d-flex align-items-center mb-3">
-        <div class="me-3 text-success file-icon">✉️</div>
-        <div>
-        <h5 class="card-title mb-0">Cover Letter</h5>
-        <div class="meta">PDF • 28 KB • Updated: Dec 2025</div>
-        </div>
-        </div>
-        <p class="card-text text-muted">A concise cover letter describing my strengths and the value I bring to teams and projects.</p>
-        <div class="mt-auto d-flex gap-2">
-        <a href="./Sridhar Web Developer - Cover Letter.pdf" download="Sridhar_CoverLetter.pdf" class="btn btn-outline-success btn-download" aria-label="Download cover letter">
-        <i class="bi bi-download"></i> Download
-        </a>
-        <a href="./Sridhar Web Developer - Cover Letter.pdf" target="_blank" class="btn btn-light border">Preview</a>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Particles.js Script -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-particlesJS("particles-js",{"particles":{"number":{"value":50},"size":{"value":3},"move":{"speed":2,"direction":"none","out_mode":"bounce"},"line_linked":{"enable":!0,"opacity":0.4},"color":{"value":"#ffffff"}},"interactivity":{"events":{"onhover":{"enable":!0,"mode":"grab"},"onclick":{"enable":!0,"mode":"push"}},"modes":{"grab":{"distance":150,"line_linked":{"opacity":0.8}},"bubble":{"distance":200,"size":67,"duration":2,"opacity":0.8},"repulse":{"distance":100},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":!0})
-    </script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.stat-number');
-    const speed = 200; // lower is faster
-    const animateCounters = () => {
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText.replace('+',''); // remove + if exists
-                const increment = target / speed;
-                if(count < target) {
-                    counter.innerHTML = Math.ceil(count + increment) + '<sup>+</sup>';
-                    setTimeout(updateCount, 20);
-                } else {
-                    counter.innerHTML = target + '<sup>+</sup>';
-                }
-            };
-            updateCount();
-        });
-    };
-    // Trigger animation when section is in viewport
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                animateCounters();
-                observer.disconnect(); // run only once
-            }
-        });
-    }, { threshold: 0.5 });
-    observer.observe(document.querySelector('.row'));
-});
-</script>
-       <script>
-       const nameText="Sridhar Manoharan";let index=0;const heroName=document.getElementById("hero-name");function typeName(){if(index<nameText.length){heroName.innerHTML+=nameText.charAt(index);index++;setTimeout(typeName,50)}}
-       document.addEventListener("DOMContentLoaded",()=>{typeName()})
-        </script>
-</body>
 
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Arsenal</h2>
+                <p>A balanced breakdown of systems infrastructure and interactive client-side logic.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Core Frontend</h4>
+                    <div class="pill-container">
+                        <span class="skill-pill">JavaScript (ES6+)</span>
+                        <span class="skill-pill">jQuery</span>
+                        <span class="skill-pill">CSS3 Grid/Flexbox</span>
+                        <span class="skill-pill">Bootstrap</span>
+                        <span class="skill-pill">HTML5 Semantics</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h4>Backend & Data</h4>
+                    <div class="pill-container">
+                        <span class="skill-pill">PHP</span>
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">Query Optimization</span>
+                        <span class="skill-pill">REST APIs</span>
+                        <span class="skill-pill">Session Security</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h4>Current Focus Upgrades</h4>
+                    <div class="pill-container">
+                        <span class="skill-pill">React JS</span>
+                        <span class="skill-pill">Laravel Core</span>
+                        <span class="skill-pill">State Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-box">
+            <h2>Ready to upscale your software product?</h2>
+            <p>Let's discuss how I can bring low-latency UI engineering and robust backend infrastructure to your engineering team.</p>
+            <div class="contact-details">
+                <a href="mailto:sridharjnet@gmail.com" class="contact-link"><i class="far fa-envelope"></i> sridharjnet@gmail.com</a>
+                <a href="tel:+916374666745" class="contact-link"><i class="fas fa-mobile-alt"></i> +91 6374 666 745</a>
+                <span class="contact-link"><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu</span>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sridhar M. Built clean with manual CSS Grid.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchProject(evt, projectId) {
+            var i, content, tabs;
+            content = document.getElementsByClassName("project-content");
+            for (i = 0; i < content.length; i++) {
+                content[i].classList.remove("active");
+            }
+            tabs = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(projectId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        // Run initialization once the content finishes loading
+// Run initialization once the content finishes loading
+document.addEventListener("DOMContentLoaded", function () {
+    initPortfolioDisplay();
+});
+
+function initPortfolioDisplay() {
+    const grid = document.getElementById("portfolio-wrap-grid");
+    if (!grid) return;
+    
+    const cards = grid.getElementsByClassName("mini-project-card");
+    
+    // Initially show exactly 6 cards (1 clean row)
+    for (let i = 0; i < cards.length; i++) {
+        if (i >= 4) {
+            cards[i].style.display = "none";
+        } else {
+            cards[i].style.display = "flex";
+        }
+    }
+    
+    // Reset button state on page load or full reset
+    const toggleBtn = document.getElementById("btn-toggle-portfolio");
+    if (toggleBtn) {
+        toggleBtn.innerText = "View More";
+        toggleBtn.setAttribute("data-expanded", "false");
+    }
+}
+
+function togglePortfolioWork() {
+    const grid = document.getElementById("portfolio-wrap-grid");
+    const toggleBtn = document.getElementById("btn-toggle-portfolio");
+    if (!grid || !toggleBtn) return;
+    
+    const cards = grid.getElementsByClassName("mini-project-card");
+    const isExpanded = toggleBtn.getAttribute("data-expanded") === "true";
+    
+    // If it's already fully expanded, collapse it back down to 6 cards
+    if (isExpanded) {
+        initPortfolioDisplay();
+        
+        // Smooth scroll back up to the section top so the user isn't lost
+        document.getElementById("all-work").scrollIntoView({ behavior: 'smooth' });
+        return;
+    }
+    
+    // Find out how many cards are currently visible
+    let visibleCount = 0;
+    for (let i = 0; i < cards.length; i++) {
+        if (cards[i].style.display !== "none") {
+            visibleCount++;
+        }
+    }
+    
+    // Target the next index threshold (+4 cards)
+    let targetLimit = visibleCount + 4;
+    
+    // Reveal the next set of 4 cards
+    for (let i = visibleCount; i < targetLimit && i < cards.length; i++) {
+        cards[i].style.display = "flex";
+        cards[i].style.animation = "fadeIn 0.4s ease forwards";
+    }
+    
+    // Check if we have reached or passed the end of the project array
+    if (targetLimit >= cards.length) {
+        toggleBtn.innerText = "Show Less";
+        toggleBtn.setAttribute("data-expanded", "true");
+    } else {
+        toggleBtn.innerText = "View More";
+    }
+}
+    </script>
+    
+</body>
 </html>

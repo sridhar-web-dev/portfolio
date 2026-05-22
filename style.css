@@ -1,0 +1,787 @@
+/* Custom Reset & Premium Dark Variables */
+:root {
+    --bg-main: #0a0c10;
+    --bg-card: #121620;
+    --bg-input: #1a2030;
+    --accent-glow: #38bdf8;
+    --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #232d42;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Ambient Radial Glow Backdrops */
+.glow-bg {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Typography Helpers */
+.text-gradient {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Structural Layout Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-bg-alt {
+    background-color: #0d111a;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Premium Modular Navigation */
+.navbar {
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(10, 12, 16, 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+    height: 65px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 25px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+/* 1. REDUCED NAV BUTTON SIZE */
+.nav-links .btn-nav {
+    border: 1px solid var(--accent-glow);
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: var(--accent-glow);
+    font-size: 0.85rem;
+}
+
+.nav-links .btn-nav:hover {
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+/* Hero Context */
+.hero {
+    padding: 100px 0 50px 0;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--accent-glow);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* 1. REDUCED HERO BUTTON SIZES */
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: var(--accent-gradient);
+    color: #000;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.btn-secondary {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--border-color);
+    border-color: var(--accent-glow);
+}
+
+/* Numerical Stats Section */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto 0 auto;
+    padding: 0 20px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. BORDER GLOW ANIMATION ON CARD HOVER */
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+}
+
+.stat-card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 3. FIXED CONTAINER WITH SCROLLABLE LEFT PROJECT LIST */
+.project-wrapper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    height: 480px; /* Constrained fixed container depth */
+}
+
+/* Scrollable Left Column without expanding section */
+.project-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto; /* Activates internal vertical scrolling */
+    padding-right: 10px;
+}
+
+/* Clean Custom Scrollbar for Project List */
+.project-tabs::-webkit-scrollbar {
+    width: 4px;
+}
+.project-tabs::-webkit-scrollbar-track {
+    background: transparent;
+}
+.project-tabs::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+.project-tabs::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-glow);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    text-align: left;
+    color: var(--text-secondary);
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    flex-shrink: 0; /* Prevents button compression inside scroll space */
+}
+
+.tab-btn:hover, .tab-btn.active {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.tab-btn.active {
+    border-left: 3px solid var(--accent-glow);
+    background: rgba(56, 189, 248, 0.06);
+}
+
+.project-display {
+    border-left: 1px solid var(--border-color);
+    padding-left: 30px;
+    overflow-y: auto; /* Allows project body data to scroll safely if long */
+    height: 100%;
+}
+
+.project-content {
+    display: none;
+}
+
+.project-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--accent-glow);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.project-info h3 {
+    font-size: 1.6rem;
+    margin: 6px 0 12px 0;
+    letter-spacing: -0.02em;
+}
+
+.project-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-bullets {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.project-bullets li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.project-bullets li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-glow);
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tags span {
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    color: var(--text-primary);
+}
+
+/* 4. FINETUNED TIMELINE (CAREER JOURNEY) SECTION */
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-glow) 0%, var(--border-color) 100%);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 45px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Glowing Indicator Nodes */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    border: 2px solid var(--accent-glow);
+    box-shadow: 0 0 10px var(--accent-glow);
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover::after {
+    background-color: var(--accent-glow);
+}
+
+/* Modern Card Layout for Professional History */
+.timeline-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 2. GLOWING HOVER ON TIMELINE PANELS */
+.timeline-panel:hover {
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
+    transform: translateX(4px);
+}
+
+.timeline-meta-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 10px;
+}
+
+.company-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.company-title span {
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-glow);
+    background: rgba(56, 189, 248, 0.08);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.role-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.timeline-panel p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* 5. FINETUNED TECHNICAL ARSENAL SECTION WITH GLOW CHIPS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 2. GLOWING BORDER HOVER ON SKILL CARDS */
+.skill-card:hover {
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
+    transform: translateY(-2px);
+}
+
+.skill-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-card h4::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent-glow);
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-pill {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.skill-card:hover .skill-pill {
+    border-color: rgba(56, 189, 248, 0.2);
+    color: var(--text-primary);
+}
+
+.skill-pill:hover {
+    background: rgba(56, 189, 248, 0.08) !important;
+    border-color: var(--accent-glow) !important;
+    color: var(--accent-glow) !important;
+}
+
+/* Contact & Action Footer */
+.footer {
+    padding: 70px 0 35px 0;
+    background: #06080c;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-box {
+    text-align: center;
+    max-width: 700px;
+}
+
+.footer-box h2 {
+    font-size: 2.2rem;
+    letter-spacing: -0.04em;
+    margin-bottom: 12px;
+}
+
+.footer-box p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-link i {
+    color: var(--accent-glow);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Adaptive Media Breakpoints for Tablet & Mobile views */
+@media(max-width: 850px) {
+    .project-wrapper {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .project-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 8px;
+    }
+    .project-display {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 15px;
+        overflow-y: visible;
+    }
+    .timeline::before {
+        left: 10px;
+    }
+    .timeline-item {
+        padding-left: 35px;
+    }
+    .timeline-item::after {
+        left: 4px;
+    }
+    .skills-grid, .stats-container {
+        grid-template-columns: 1fr;
+    }
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+/* --- EDGE-TO-EDGE WRAPPING PORTFOLIO GRID --- */
+
+.full-wrap-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap down to the next row dynamically */
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 10px 0;
+}
+
+/* Fixed Card Base Footprint */
+.mini-project-card {
+    flex: 0 1 calc(25% - 18px); /* Renders exactly 4 items per row on high-res monitors */
+    min-width: 250px; /* Prevents extreme compression */
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Card Glow Hover Animations */
+.mini-project-card:hover {
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+    transform: translateY(-4px);
+}
+
+/* Browser Window Interface Simulator Frame */
+.mockup-display {
+    background: #181d2a;
+    border-bottom: 1px solid var(--border-color);
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mockup-browser-bar {
+    height: 22px;
+    background: #0f131c;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 12px;
+}
+
+.mockup-browser-bar .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-secondary);
+    opacity: 0.4;
+}
+
+/* Image/Icon Mockup Canvas Space */
+.mockup-img-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    opacity: 1;
+    background-color: #f2f2f2;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.mini-project-card:hover .mockup-img-placeholder {
+    color: var(--accent-glow);
+    opacity: 1;
+}
+
+/* Content Frame Data */
+.mini-card-body {
+    padding: 14px 16px;
+}
+
+.mini-card-body h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+}
+
+.project-domain-link {
+    font-size: 0.8rem;
+    color: var(--accent-glow);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.project-domain-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Media Breakpoints for Fluid Multi-Row Wrapping scaling */
+@media(max-width: 1100px) {
+    .mini-project-card {
+        flex: 0 1 calc(33.333% - 16px); /* 3 items per row on tablets */
+    }
+}
+
+@media(max-width: 800px) {
+    .mini-project-card {
+        flex: 0 1 calc(50% - 12px); /* 2 items per row on medium/small mobile landscapes */
+    }
+}
+
+@media(max-width: 550px) {
+    .mini-project-card {
+        flex: 0 1 100%; /* Full-width mobile collapse card grid stacking */
+    }
+}
